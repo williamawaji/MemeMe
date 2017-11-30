@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,113 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCe-3S-geO" userLabel="TopToolbar">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="bmT-bu-2XU"/>
+                                    <constraint firstAttribute="height" constant="44" id="lc2-10-XXd"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="action" id="jUy-p5-dQZ">
+                                        <connections>
+                                            <action selector="shareMemeImage:" destination="BYZ-38-t0r" id="KXD-2Y-bfw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9zM-2t-EWj"/>
+                                    <barButtonItem systemItem="cancel" id="bNl-xq-XKz">
+                                        <connections>
+                                            <action selector="cancelMemeImage:" destination="BYZ-38-t0r" id="5jl-4p-BKt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-Jz-J4B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-9Z-AmB" userLabel="Top Text Field">
+                                <rect key="frame" x="19" y="109" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2N5-EC-nA7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="9vQ-z6-S0x"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="viw-Kh-e5F"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-ue-Tos" userLabel="Bottom Text Field">
+                                <rect key="frame" x="19" y="528" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4sp-0r-lQI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="UMg-XY-P0h"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="e8v-m3-TOv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zzp-KH-VwF" userLabel="BottomToolbar">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="e1A-IO-CIR"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qW5-Sm-CHt"/>
+                                    <barButtonItem systemItem="camera" id="t9t-PX-OR1">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="RAn-Vs-l3W"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Kol-1e-N6a"/>
+                                    <barButtonItem title="Album" id="ZAD-33-mJr">
+                                        <connections>
+                                            <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="hoN-d7-Eae"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tEb-V2-Jmt"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vxT-Jz-J4B" secondAttribute="trailing" id="1T4-fQ-1FY"/>
+                            <constraint firstItem="Zzp-KH-VwF" firstAttribute="top" secondItem="vxT-Jz-J4B" secondAttribute="bottom" id="8gA-jI-kQG"/>
+                            <constraint firstItem="Zzp-KH-VwF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HZ0-fD-Zaf"/>
+                            <constraint firstItem="Zzp-KH-VwF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hfa-Yx-6dc"/>
+                            <constraint firstItem="sCe-3S-geO" firstAttribute="bottom" secondItem="vxT-Jz-J4B" secondAttribute="top" id="Yxt-29-Jae"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="sCe-3S-geO" secondAttribute="top" id="bNq-Nb-dY9"/>
+                            <constraint firstItem="zaR-ue-Tos" firstAttribute="centerX" secondItem="vxT-Jz-J4B" secondAttribute="centerX" constant="3" id="cmS-d4-PpH"/>
+                            <constraint firstItem="vxT-Jz-J4B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hSp-Xa-3bv"/>
+                            <constraint firstItem="sCe-3S-geO" firstAttribute="trailing" secondItem="vxT-Jz-J4B" secondAttribute="trailing" id="iBd-Zr-KMi"/>
+                            <constraint firstItem="Ht0-9Z-AmB" firstAttribute="top" secondItem="vxT-Jz-J4B" secondAttribute="top" constant="45" id="k8h-Ay-QZf"/>
+                            <constraint firstItem="Zzp-KH-VwF" firstAttribute="top" secondItem="vxT-Jz-J4B" secondAttribute="bottom" id="lt9-w7-Vud"/>
+                            <constraint firstItem="zaR-ue-Tos" firstAttribute="bottom" secondItem="vxT-Jz-J4B" secondAttribute="bottom" constant="-45" id="s51-sm-lpx"/>
+                            <constraint firstItem="Ht0-9Z-AmB" firstAttribute="centerX" secondItem="vxT-Jz-J4B" secondAttribute="centerX" constant="3" id="sap-8p-Ith"/>
+                            <constraint firstItem="sCe-3S-geO" firstAttribute="leading" secondItem="vxT-Jz-J4B" secondAttribute="leading" id="t2T-DA-djG"/>
+                            <constraint firstItem="Zzp-KH-VwF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tdF-ka-wCN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="zaR-ue-Tos" id="hUm-2r-W29"/>
+                        <outlet property="bottomToolBar" destination="Zzp-KH-VwF" id="cfI-KG-zew"/>
+                        <outlet property="cameraButton" destination="t9t-PX-OR1" id="kfa-Ul-wqi"/>
+                        <outlet property="imagePickerView" destination="vxT-Jz-J4B" id="I6A-b6-SwG"/>
+                        <outlet property="shareButtom" destination="jUy-p5-dQZ" id="fwV-RA-ryz"/>
+                        <outlet property="topTextField" destination="Ht0-9Z-AmB" id="2Sd-FG-27m"/>
+                        <outlet property="topToolBar" destination="sCe-3S-geO" id="tfC-Dd-sfn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.934032983508249" y="36"/>
         </scene>
     </scenes>
 </document>

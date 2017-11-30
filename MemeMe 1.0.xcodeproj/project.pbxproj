@@ -12,6 +12,8 @@
 		3DDD2DF01FCCF8F2003CE18F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDD2DEE1FCCF8F2003CE18F /* Main.storyboard */; };
 		3DDD2DF21FCCF8F2003CE18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DDD2DF11FCCF8F2003CE18F /* Assets.xcassets */; };
 		3DDD2DF51FCCF8F2003CE18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDD2DF31FCCF8F2003CE18F /* LaunchScreen.storyboard */; };
+		3DDD2DFF1FCE6085003CE18F /* MememeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD2DFE1FCE6085003CE18F /* MememeTextFieldDelegate.swift */; };
+		3DDD2E011FCFA0C0003CE18F /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD2E001FCFA0C0003CE18F /* MemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3DDD2DF11FCCF8F2003CE18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DDD2DF41FCCF8F2003CE18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DDD2DF61FCCF8F2003CE18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DDD2DFE1FCE6085003CE18F /* MememeTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MememeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		3DDD2E001FCFA0C0003CE18F /* MemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				3DDD2DEA1FCCF8F2003CE18F /* AppDelegate.swift */,
+				3DDD2DFE1FCE6085003CE18F /* MememeTextFieldDelegate.swift */,
 				3DDD2DEC1FCCF8F2003CE18F /* ViewController.swift */,
+				3DDD2E001FCFA0C0003CE18F /* MemeModel.swift */,
 				3DDD2DEE1FCCF8F2003CE18F /* Main.storyboard */,
 				3DDD2DF11FCCF8F2003CE18F /* Assets.xcassets */,
 				3DDD2DF31FCCF8F2003CE18F /* LaunchScreen.storyboard */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDD2DFF1FCE6085003CE18F /* MememeTextFieldDelegate.swift in Sources */,
 				3DDD2DED1FCCF8F2003CE18F /* ViewController.swift in Sources */,
 				3DDD2DEB1FCCF8F2003CE18F /* AppDelegate.swift in Sources */,
+				3DDD2E011FCFA0C0003CE18F /* MemeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RU66EMPGY;
 				INFOPLIST_FILE = "MemeMe 1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WA.MemeMe-1-0";
@@ -289,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RU66EMPGY;
 				INFOPLIST_FILE = "MemeMe 1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WA.MemeMe-1-0";
