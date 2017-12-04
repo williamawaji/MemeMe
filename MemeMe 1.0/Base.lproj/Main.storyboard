@@ -43,7 +43,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-9Z-AmB" userLabel="Top Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-9Z-AmB" userLabel="Top Text Field">
                                 <rect key="frame" x="19" y="109" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2N5-EC-nA7"/>
@@ -54,7 +54,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-ue-Tos" userLabel="Bottom Text Field">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-ue-Tos" userLabel="Bottom Text Field">
                                 <rect key="frame" x="19" y="528" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4sp-0r-lQI"/>
