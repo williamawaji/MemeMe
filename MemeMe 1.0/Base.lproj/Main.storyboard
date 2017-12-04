@@ -74,13 +74,13 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qW5-Sm-CHt"/>
                                     <barButtonItem systemItem="camera" id="t9t-PX-OR1">
                                         <connections>
-                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="RAn-Vs-l3W"/>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="7vp-32-kh3"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Kol-1e-N6a"/>
                                     <barButtonItem title="Album" id="ZAD-33-mJr">
                                         <connections>
-                                            <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="hoN-d7-Eae"/>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="ApF-ef-ygc"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tEb-V2-Jmt"/>
